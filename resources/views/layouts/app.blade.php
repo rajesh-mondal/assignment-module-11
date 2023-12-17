@@ -9,7 +9,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+        <div class="container">
             <a class="navbar-brand" href="/">Store Keeper</a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
