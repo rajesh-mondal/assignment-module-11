@@ -66,12 +66,6 @@ class SalesController extends Controller {
         return redirect()->route( 'sales.index' )->with( 'success', 'Sale deleted successfully!' );
     }
 
-    // public function show( $id ) {
-    //     $sale = DB::table( 'sales' )->find( $id );
-
-    //     return view( 'sales.show', compact( 'sale' ) );
-    // }
-
     public function show( $id ) {
         $sale = DB::table( 'sales' )
             ->join( 'products', 'sales.product_id', '=', 'products.id' )

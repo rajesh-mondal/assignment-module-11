@@ -4,7 +4,7 @@
     <div class="container">
         <h1>Product List</h1>
         
-        <form method="POST" action="{{ url('/products') }}">
+        <form method="POST" action="{{ route('products.store') }}">
             @csrf
             <div class="mb-3">
                 <label for="name" class="form-label">Product Name</label>

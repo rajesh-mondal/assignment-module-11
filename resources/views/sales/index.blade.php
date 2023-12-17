@@ -5,7 +5,7 @@
 
         <h1 class="mb-4 d-flex justify-content-between align-items-center">
             Sales History
-            <a href="{{ url('/sales/create') }}" class="btn btn-primary">Sell Product</a>
+            <a href="{{ route('sales.create') }}" class="btn btn-primary">Sell Product</a>
         </h1>
 
         @if(session('success'))

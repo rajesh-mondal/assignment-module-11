@@ -4,7 +4,7 @@
     <div class="container mt-4">
         <h1 class="mb-4 d-flex justify-content-between align-items-center">
             Product List
-            <a href="{{ url('/products/create') }}" class="btn btn-primary">Add New Product</a>
+            <a href="{{ route('products.create') }}" class="btn btn-primary">Add New Product</a>
         </h1>
 
         @if(session('success'))
@@ -31,9 +31,9 @@
                         <td>{{ $product->quantity }}</td>
                         <td>{{ $product->price }}</td>
                         <td>
-                            <a href="{{ url('/products/edit', ['id' => $product->id]) }}" class="btn btn-primary btn-sm">Edit</a>
+                            <a href="{{ route('products.edit', $product->id) }}" class="btn btn-primary btn-sm">Edit</a>
 
-                            <form method="POST" action="{{ url('/products/delete', ['id' => $product->id]) }}" style="display:inline;">
+                            <form method="POST" action="{{ route('products.destroy', $product->id) }}" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this product?')">Delete</button>
