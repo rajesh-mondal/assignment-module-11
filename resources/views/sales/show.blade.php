@@ -8,7 +8,7 @@
 
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Product: {{ $sale->product_id }}</h5>
+                <h5 class="card-title">Product Name: {{ $sale->product_name }}</h5>
                 <p class="card-text">Quantity Sold: {{ $sale->quantity_sold }}</p>
                 <p class="card-text">Amount: {{ $sale->amount }}</p>
                 <p class="card-text">Sale Date: {{ $sale->created_at }}</p>

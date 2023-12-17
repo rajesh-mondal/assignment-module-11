@@ -34,6 +34,12 @@
                         <td>{{ $sale->amount }}</td>
                         <td>{{ $sale->created_at }}</td>
                         <td>
+                            <a href="{{ route('sales.edit', $sale->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                            <form action="{{ route('sales.destroy', $sale->id) }}" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</button>
+                            </form>
                             <a href="{{ route('sales.show', ['id' => $sale->id]) }}" class="btn btn-info btn-sm">View</a>
                         </td>
                     </tr>
